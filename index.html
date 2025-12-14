@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portfolio - Ivan Montes de Oca</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
@@ -18,33 +19,69 @@
     </section>
     <section id="habilidades">
         <h2>Habilidades</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React Js</li>
-            <li>MongoDB</li>
-            <li>NodeJs</li>
-            <li>NextJs</li>
-            <li>POSTMAN</li>
-            <li>Vercel</li>
-            <li>Vite</li>
-            <li>Sass</li>
-        </ul>
+        <section id="habilidades">
+    <div class="skills-container">
+        <div class="skill">
+            <i class="fab fa-html5"></i>
+            <span>HTML</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-sass"></i>
+            <span>Sass</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-js-square"></i>
+            <span>JavaScript</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-react"></i>
+            <span>ReactJS</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-node-js"></i>
+            <span>NodeJS</span>
+        </div>
+        <div class="skill">
+            <i class="fab fa-js-square"></i> <!-- NextJS no tiene ícono específico, usa JS o busca custom -->
+            <span>NextJS</span>
+        </div>
+        <div class="skill">
+            <i class="fas fa-database"></i> <!-- MongoDB usa database genérico o custom -->
+            <span>MongoDB</span>
+        </div>
+        <div class="skill">
+            <i class="fas fa-database"></i> <!-- MySQL similar -->
+            <span>MySQL</span>
+        </div>
+        <div class="skill">
+            <i class="fas fa-tools"></i> <!-- Postman no tiene ícono FA, usa tools -->
+            <span>Postman</span>
+        </div>
+    </div>
+</section>
     </section>
     <section id="proyectos">
         <h2>Proyectos</h2>
         <p>Próximamente: Mis proyectos destacados.</p>
     </section>
     <section id="contacto">
-        <h2>Contacto</h2>
-        <form id="contact-form">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Mensaje"></textarea>
-            <button type="submit">Enviar</button>
+    <h2>Contacto</h2>
+    <div class="contact-container">
+        <p>¿Quieres charlar? ¡Envíame un mensaje!</p>
+        <form id="contact-form" class="contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="Nombre" required class="form-input">
+                <input type="email" placeholder="Email" required class="form-input">
+            </div>
+            <textarea placeholder="Mensaje" required class="form-textarea"></textarea>
+            <button type="submit" class="form-button">Enviar Mensaje</button>
         </form>
-    </section>
+    </div>
+</section>
     <footer>
         <p>&copy; 2025 Ivan Montes de Oca. Todos los derechos reservados.</p>
     </footer>

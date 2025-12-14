@@ -1,45 +1,148 @@
-@import "tailwindcss";
-
 body {
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Arial", sans-serif;
   margin: 0;
   padding: 0;
-  font-style: oblique;
-  font-size: larger;
-  text-align: center;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #0055A4;
+  color: #000000;
+  line-height: 1.6;
+}
+
+img{
+  height: 40%;
+  width: 40%;
 }
 
 header {
-  background-color: #007bff;
+  background-color: #2C3E50;
   color: white;
   text-align: center;
   padding: 2rem;
 }
-
-img {
-  display: block;
-  height: 25%;
-  width: 25%;
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
 }
+header p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
 section {
   padding: 2rem;
   margin: 1rem auto;
   max-width: 800px;
 }
 
-#habilidades ul {
-  list-style: none;
+#sobre-mi {
+  text-align: center;
+}
+#sobre-mi p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#habilidades {
+  text-align: center;
+}
+#habilidades h2 {
+  margin-bottom: 1.5rem;
+}
+#habilidades .skills-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  justify-content: center;
 }
-
-#contact-form {
+#habilidades .skill {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+#habilidades .skill i {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+#habilidades .skill span {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+#habilidades .skill:hover {
+  transform: scale(1.1);
+}
+
+#proyectos {
+  text-align: center;
+}
+#proyectos p {
+  font-size: 1.1rem;
+}
+
+#contacto .contact-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+#contacto .contact-container p {
+  margin-bottom: 1rem;
+}
+#contacto .contact-form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+#contacto .form-row {
+  display: flex;
   gap: 1rem;
+  margin-bottom: 1rem;
+}
+#contacto .form-input, #contacto .form-textarea {
+  flex: 1;
+  padding: 0.8rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  color: #000000;
+}
+#contacto .form-input:focus, #contacto .form-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+#contacto .form-textarea {
+  resize: vertical;
+  min-height: 120px;
+  margin-bottom: 1rem;
+}
+#contacto .form-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+#contacto .form-button:hover {
+  background-color: rgb(0, 98.4, 204);
+  transform: translateY(-2px);
+}
+#contacto .form-button:active {
+  transform: translateY(0);
 }
 
 footer {
@@ -48,10 +151,42 @@ footer {
   background-color: #333;
   color: white;
 }
+footer p {
+  margin: 0;
+}
 
 @media (max-width: 600px) {
+  header {
+    padding: 1.5rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
   section {
     padding: 1rem;
+  }
+  #habilidades .skill {
+    width: 80px;
+    padding: 0.8rem;
+  }
+  #habilidades .skill i {
+    font-size: 1.5rem;
+  }
+  #habilidades .skill span {
+    font-size: 0.8rem;
+  }
+  #contacto .contact-form {
+    padding: 1.5rem;
+  }
+  #contacto .form-row {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  #contacto .form-button {
+    width: 100%;
   }
 }
 

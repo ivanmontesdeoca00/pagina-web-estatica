@@ -1,49 +1,206 @@
-// Variables
-$primary-color: #007bff;
-$font-family: 'Arial', sans-serif;
+// Variables globales para paleta de colores
+$primary-color: #007bff; // Azul primario para botones y acentos (mantenido para otros elementos)
+$secondary-color: #f8f9fa; // Gris claro para fondos
+$text-color: #000000; // Texto principal
+$border-color: #ddd; // Bordes sutiles
+$font-family: 'Arial', sans-serif; // Fuente base
+$body-bg-color: #0055A4; // Nuevo: Azul Francia para fondo del body
+$header-bg-color: #2C3E50; // Nuevo: Azul metalizado oscuro para header
 
+// Estilos generales del body
 body {
     font-family: $font-family;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: $body-bg-color; // Cambiado a azul Francia
+    color: $text-color;
+    line-height: 1.6;
 }
 
+// Header principal
 header {
-    background-color: $primary-color;
+    background-color: $header-bg-color; // Cambiado a azul metalizado oscuro
     color: white;
     text-align: center;
     padding: 2rem;
+    h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+        margin: 0.5rem 0 0;
+    }
 }
 
+// Secciones generales
 section {
     padding: 2rem;
     margin: 1rem auto;
-    max-width: 800px;
+    max-width: 800px; // Ancho base, excepto contacto que es más ancho
 }
 
-#habilidades ul {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+// Sección Sobre Mí
+#sobre-mi {
+    text-align: center;
+    p {
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
 }
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+// Sección Habilidades (con íconos y fondo negro)
+#habilidades {
+    text-align: center;
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+    .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    .skill {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #000; // Fondo negro
+        border: 2px solid #fff; // Borde blanco
+        border-radius: 10px;
+        padding: 1rem;
+        width: 100px;
+        text-align: center;
+        transition: transform 0.3s ease;
+        i {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        span {
+            color: #fff;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
+// Sección Proyectos
+#proyectos {
+    text-align: center;
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+// Sección Contacto (formulario ensanchado y estético)
+#contacto {
+    .contact-container {
+        max-width: 900px; // Más ancho
+        margin: 0 auto;
+        text-align: center;
+        p {
+            margin-bottom: 1rem;
+        }
+    }
+    .contact-form {
+        background-color: $secondary-color;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        border: 1px solid $border-color;
+    }
+    .form-row {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .form-input, .form-textarea {
+        flex: 1;
+        padding: 0.8rem;
+        border: 2px solid $border-color;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+        color: $text-color;
+        &:focus {
+            border-color: $primary-color;
+            box-shadow: 0 0 8px rgba($primary-color, 0.3);
+            outline: none;
+        }
+    }
+    .form-textarea {
+        resize: vertical;
+        min-height: 120px;
+        margin-bottom: 1rem;
+    }
+    .form-button {
+        background-color: $primary-color;
+        color: #fff;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        &:hover {
+            background-color: darken($primary-color, 10%);
+            transform: translateY(-2px);
+        }
+        &:active {
+            transform: translateY(0);
+        }
+    }
+}
+
+// Footer
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #333;
     color: white;
+    p {
+        margin: 0;
+    }
 }
 
-// Responsive
+// Responsive design
 @media (max-width: 600px) {
-    section { padding: 1rem; }
+    header {
+        padding: 1.5rem;
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+    section {
+        padding: 1rem;
+    }
+    #habilidades .skill {
+        width: 80px;
+        padding: 0.8rem;
+        i {
+            font-size: 1.5rem;
+        }
+        span {
+            font-size: 0.8rem;
+        }
+    }
+    #contacto .contact-form {
+        padding: 1.5rem;
+    }
+    #contacto .form-row {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    #contacto .form-button {
+        width: 100%;
+    }
 }
