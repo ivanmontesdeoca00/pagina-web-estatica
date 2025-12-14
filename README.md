@@ -24,4 +24,14 @@ Accede al sitio desplegado aquí: (https://ivanmontesdeoca00.github.io/pagina-we
 2. Abre `index.html` en tu navegador (o usa un servidor local como Live Server en VS Code).
 3. Para editar estilos: Instala Sass (`npm install -g sass`) y compila con `sass css/styles.scss css/styles.css --watch`.
 
-## 📁 Estructura del Proyecto
+## 🎨 Características Destacadas
+- Paleta personalizada: Fondo azul Francia, header azul metalizado oscuro.
+- Íconos de habilidades con hover effects.
+- Formulario de contacto con diseño moderno y responsive.
+- Animaciones suaves para mejor UX.
+
+## 📞 Contacto
+Si tienes feedback o quieres colaborar, contáctame vía el formulario en el sitio o en ivanmontesdeoca00@icloud.com .
+
+---
+⭐ Si te gusta, dale una estrella al repo. ¡Gracias por visitar!
